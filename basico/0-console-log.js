@@ -15,7 +15,7 @@ console.log(`Nayana 'Loivos'`);
 console.log(123); //inteiro
 console.log(12.5); //real
 
-//3.Exibir a concatenação de string e number
+//3.Exibir concatenação de string e number
 console.log("Estudo Javascript todo dia por", 6, "horas e eu sou uma desenvolvedora de software!");
 console.log("Estudo Javascript todo dia por " + 6 + " horas e eu sou uma desenvolvedora de software!");
 console.log(`Estudo Javascript todo dia por ${6} horas e eu sou uma desenvolvedora de software!`);

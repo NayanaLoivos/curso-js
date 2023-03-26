@@ -33,6 +33,11 @@ console.debug(nome);
 */
 
 //7. Utilizar let ou const para declarar variáveis, não utilizar var.
+
 //8. Não redeclarar variáveis com let e const.
+
 //9. Não se pode modificar o valor de uma variável declarada com const, ou seja, 
   // variável declarada com const deve ser inicializada no mesmo momento da declaração.
+
+//10.Não criar variáveis sem alguma palavra reservada da linguagem.
+livro = 'O homem que calculava';

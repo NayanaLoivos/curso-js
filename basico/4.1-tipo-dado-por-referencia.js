@@ -9,9 +9,12 @@ arr2.push(9);
 console.debug(arr1, arr2); //[6, 7, 8, 9] [6, 7, 8, 9]
 /*
     *O valor que foi adicionado na arr2 também é adicionado em arr1, isso porque
-    *arr2 está apontado para o mesmo local de arr1 dentro da memória do computador.
+    *arr2 está apontado para o mesmo valor dentro da memória do computador.
     *Portanto arr1 e arr2 apontam exatamente para o mesmo valor não exitem valor [6,7,8]
-    *duas vezes na memória. Isso são dados passado por referência.
+    *duas vezes na memória. Esse comportamento se dá com os dados passado por referência.
+    *Os tipos de referência são: array, object, function.
+    *Vale ressaltar que valores passados por referência tem seus valores mutáveis, ou seja,
+    *é possível manejar cada um de seus elementos.
 */
 
 //Dados primitivos

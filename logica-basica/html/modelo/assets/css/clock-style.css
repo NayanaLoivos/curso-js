@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root {
+    --primary-color: #86a4a1;
+    --primary-color-darker: #436b67;
+    --primary-color-active: #e3e3e3;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0; 
+    margin: 0;    
+}
+
+body {    
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;       
+}
+
+.container {
+    max-width: 40rem;
+    margin: 2rem auto;
+    border-style: solid;
+    border-color: #e4e9ed;
+    border-width: 2rem;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+#clock, #week {
+    text-align: center;
+    color: #fff;    
+    font-weight: bold;    
+    margin: 3rem auto;   
+}
+#week {
+    font-size: 2rem;
+}
+
+#clock {
+    letter-spacing: 0.2rem;
+    font-size: 4rem;
+}
+
+#clock:hover {
+    animation: increase 1s infinite alternate;
+}
+
+@keyframes increase {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+    }
+}

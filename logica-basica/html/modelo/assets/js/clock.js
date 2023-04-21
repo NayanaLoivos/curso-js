@@ -4,9 +4,9 @@ function app() {
 
     function getClock() {
         const date = new Date();
-        const hours = date.getHours().toString();
-        const min = date.getMinutes().toString();
-        const sec = date.getSeconds().toString();        
+        const hours = zeroLeft(date.getHours().toString());
+        const min = zeroLeft(date.getMinutes().toString());
+        const sec = zeroLeft(date.getSeconds().toString());        
 
         renderClock(hours, min, sec);    
     }
@@ -33,11 +33,19 @@ function app() {
         week.textContent = daysWeek[day] + ', ' + dayNumber + ' de ' + mounthsYear[mounth] + ' de ' + year;
     }
 
-    getClock();
-    getDate();
+    function zeroLeft(str) {
+        return str >= 10 ? str : `0${str}`;
+    }
 
-    /* Caso queria pegar automaticamente o date
-    new Date().toLocalDateString('idioma', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});*/
+    getClock();
+    getDate();    
 }
 
 setInterval(app, 1000);
+
+//Caso queria criar automaticamente o date e simplificar o código:
+const clock = document.querySelector('#clock2');
+const date = new Date();
+
+clock.innerHTML = date.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'});
+                  //date.toLocalDateString('idioma', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});

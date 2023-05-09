@@ -79,3 +79,7 @@ contador3 = contador3 - numero1;
 console.debug(contador3);
 contador3 = contador3 - numero1;
 console.debug(contador3);
+
+//4.2 Qual o resultado?
+let x = 5;
+console.log(x++ + ++x); //12

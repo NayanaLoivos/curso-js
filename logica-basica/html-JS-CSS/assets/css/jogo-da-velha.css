@@ -65,6 +65,12 @@ body {
     align-items: center;    
 }
 
+/*no click permission in cell containing class x or circle*/
+.cell.x, .cell.cell.circle {
+    cursor: not-allowed;
+}
+
+/*no border around*/
 .cell:nth-child(1),
 .cell:nth-child(2),
 .cell:nth-child(3) {
@@ -89,9 +95,20 @@ body {
     border-bottom: none;
 }
 
+/*change color on hover*/
+.container-board.x .cell:not(.x):not(.circle):hover:after,
+.container-board.x .cell:not(.x):not(.circle):hover::before,
+.container-board.circle .cell:not(.x):not(.circle):hover:after,
+.container-board.circle .cell:not(.x):not(.circle):hover::before {
+    background: rgba(200, 110, 158, 0.2) !important;
+}
+
 /*x*/
+/*board containing class x*/
 .cell.x::before,
-.cell.x::after {
+.cell.x::after, 
+.container-board.x .cell:not(.x):not(.circle):hover:after, /*:not() - que não tem a class x, que não tem a class circle, aplica nas cell vazias dadas regras*/
+.container-board.x .cell:not(.x):not(.circle):hover::before {
     content: "";
     height: calc(4rem * 0.15);
     width: calc(8rem * 0.9);
@@ -99,20 +116,25 @@ body {
     position: absolute;
 }
 
-.cell.cell.x::before {
+.cell.cell.x::before,
+.container-board.x .cell:hover::before {
     transform: rotate(45deg);
 }
-.cell.cell.x::after {
+.cell.cell.x::after,
+.container-board.x .cell:hover::after {
     transform: rotate(-45deg);
 }
 
 /*circle*/
+/*board containing class circle*/
 .cell.circle::before,
-.cell.circle::after {
+.cell.circle::after,
+.container-board.circle .cell:not(.circle):not(.x):hover:after,
+.container-board.circle .cell:not(.circle):not(.x):hover::before {
     content: "";
     background: #fff;
-    height: calc(8rem * 0.90);
-    width: calc(8rem * 0.90);
+    height: calc(7rem * 0.90);
+    width: calc(7rem * 0.90);
     position: absolute;
     border-radius: 50%;        
 }

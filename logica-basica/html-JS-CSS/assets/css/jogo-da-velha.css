@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
 :root {
-    --primary-color: azure;
-    --primary-color-darker: #436b67;
-    --primary-color-active: #e3e3e3;
+    --primary-color: rgb(221, 250, 250);
+    --primary-title-color: #436b67;
 }
 
 * {
@@ -19,27 +18,14 @@ body {
     line-height: 1.5rem;           
 }
 
-.container-main-title, .board {   
+.container-main-title, .container-board {   
     background-color: skyblue;
     padding: 1rem;
     width: 80vw;
     margin: 0 auto;   
 }
 
-.main-title1, .main-title2, .main-title3 {    
-    text-align: center;
-    color: #436b67;
-    text-shadow: 3px 0 0 azure;        
-}
-
-.main-title2 {    
-    margin-left: 5rem;         
-    margin-top: 0.6rem; 
-    transform: rotate(55deg);
-    color: pink
-}
-
-.board {  
+.container-board {  
     background: linear-gradient(
        80deg,
         skyblue 0%,
@@ -53,15 +39,30 @@ body {
      align-items: center;*/
 }
 
+/*main title*/
+.main-title1, .main-title2, .main-title3 {    
+    text-align: center;
+    color: var(--primary-title-color);
+    text-shadow: 3px 0 0 azure;        
+}
+
+.main-title2 {    
+    margin-left: 5rem;         
+    margin-top: 0.6rem; 
+    transform: rotate(55deg);
+    color: pink
+}
+
+/*cells*/
 .cell {
     height: 10rem;
     width: 10rem;
     /*background-color: #436b67;  somente para testar a posição*/
     border: 0.2rem solid #fff;  
     list-style: none;  
-    /*display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center;*/
+    align-items: center;    
 }
 
 .cell:nth-child(1),
@@ -86,4 +87,32 @@ body {
 .cell:nth-child(8),
 .cell:nth-child(9) {
     border-bottom: none;
+}
+
+/*x*/
+.cell.x::before,
+.cell.x::after {
+    content: "";
+    height: calc(4rem * 0.15);
+    width: calc(8rem * 0.9);
+    background: white;
+    position: absolute;
+}
+
+.cell.cell.x::before {
+    transform: rotate(45deg);
+}
+.cell.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+/*circle*/
+.cell.circle::before,
+.cell.circle::after {
+    content: "";
+    background: #fff;
+    height: calc(8rem * 0.90);
+    width: calc(8rem * 0.90);
+    position: absolute;
+    border-radius: 50%;        
 }

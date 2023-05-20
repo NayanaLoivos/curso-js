@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root {
+    --primary-color: #86a4a1;
+    --button-color-darker: #436b67;
+    --button-color-active: #e3e3e3;
+}
+* {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0; 
+    margin: 0;    
+}
+
+body {    
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;       
+}
+
+.container {
+    max-width: 30rem;
+    margin: 2rem auto;
+    background: #e4e9ed;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.clock {
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.pause {
+    color: red;
+}
+
+.continue {
+    color: #86a4a1;
+}
+#start, #pause, #continue, #clear {
+    border: none;    
+    border-radius: 0.2rem;
+    background: var(--button-color-darker);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;    
+    cursor: pointer;
+    margin: 1rem auto;
+    padding: 0.3rem;
+}
+
+#start:active, #pause:active, #continue:active,  #clear:active {
+    background: var(--button-color-active);
+}

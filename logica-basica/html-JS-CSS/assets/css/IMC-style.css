@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root {
+    --primary-color: #86a4a1;
+    --primary-color-darker: #436b67;
+    --primary-color-active: #e3e3e3;
+    --color-resultado-positivo:#90f6cf;
+    --color-preenchimento-invalido: #e19387;
+}
+* {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0; 
+    margin: 0;    
+}
+
+body {    
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;       
+}
+
+.container {
+    max-width: 30rem;
+    margin: 2rem auto;
+    background: #e4e9ed;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+form input {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: none;
+}
+
+form input:focus {
+    outline: 0.1rem solid var(--primary-color);
+}
+
+form button {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+form button:hover {
+    background: var(--primary-color-darker);
+}
+
+form button:active {
+    background: var(--primary-color-active);    
+}
+
+.paragrafo-resultado, .bad {
+    background: var(--color-resultado-positivo);
+    padding: 0.3rem 0.3rem;
+}
+
+.bad {
+    background: var(--color-preenchimento-invalido);
+}

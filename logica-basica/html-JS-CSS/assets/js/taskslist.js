@@ -3,7 +3,11 @@ const btnAddTask = document.querySelector('#btn-add-task');
 const task = document.querySelector('.task');
 
 //cria li dinamicamente
-
+function createLi() {
+    const li = document.createElement('li');
+    console.log(li)
+    return li;
+}
 
 //Captura evento de click da tecla 'enter' pressionado e exibindo no front
 

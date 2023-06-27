@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root {
+    --primary-color: #86a4a1;
+    --primary-color-darker: #436b67;
+    --primary-color-active: #e3e3e3;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0; 
+    margin: 0;    
+}
+
+body {    
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;       
+}
+
+.container {
+    max-width: 30rem;
+    margin: 2rem auto;
+    background: #e4e9ed;
+    padding: 1rem;
+    border-radius:
+     1rem;
+}
+
+#title, #input-task, #btn-add-task {
+    display: block;  
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    text-align: center;
+
+}
+
+#title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;   
+}
+
+#input-task {    
+    font-size: 1.5rem;
+    height: 2rem;
+    padding: 0 1rem;
+    border: none;    
+}
+
+#input-task:focus {
+    outline: 0.1rem solid var(--primary-color);
+}
+
+#btn-add-task {
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+#btn-add-task:hover {
+    background: var(--primary-color-darker);
+}
+
+#btn-add-task:active {
+    background: var(--primary-color-active);
+}

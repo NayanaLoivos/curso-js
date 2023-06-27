@@ -4,8 +4,7 @@ const task = document.querySelector('.task');
 
 //cria li dinamicamente
 function createLi() {
-    const li = document.createElement('li');
-    console.log(li)
+    const li = document.createElement('li');    
     return li;
 }
 
@@ -15,12 +14,17 @@ function createLi() {
 //Limpa e cria focus no input
 
 
-//Criar tarefas front, append na tarefas e por fim limpa a tarefa
-
+//Criar tarefas front, append na tarefas e por fim limpa a tarefa do input
+function createTask() {
+    const li = createLi();
+    li.innerHTML = inputTask.value;
+    task.appendChild(li);    
+}
 
 //Capturar o conteúdo do input ao click
 function clickEvent() {
     if(!inputTask.value) return;
+    createTask();
     return inputTask.value;   
 }
 

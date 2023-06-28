@@ -11,14 +11,18 @@ function createLi() {
 //Captura evento de click da tecla 'enter' pressionado e exibindo no front
 
 
-//Limpa e cria focus no input
+//Limpa e o input
+function clearInput() {
+    inputTask.value = '';       
 
+}
 
 //Criar tarefas front, append na tarefas e por fim limpa a tarefa do input
 function createTask() {
     const li = createLi();
     li.innerHTML = inputTask.value;
     task.appendChild(li);    
+    clearInput();
 }
 
 //Capturar o conteúdo do input ao click

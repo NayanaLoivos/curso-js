@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100&display=swap');
+:root {
+    --primary-color: #86a4a1;
+    --primary-color-darker: #436b67;
+    --primary-color-active: #e3e3e3;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0; 
+    margin: 0;    
+}
+
+body {    
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5rem;    
+}
+
+.container {
+    max-width: 40rem;
+    margin: 2rem auto;
+    border-style: solid;
+    border-color: #e4e9ed;
+    border-width: 2rem;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.inputs, .principal__lista_produto {
+    text-align: center;
+    margin: 2rem auto;
+    
+}
+
+.principal__lista_produto {
+    list-style-type: none;
+}
+
+.principal__area-de-inputs__nome, .principal__area-de-inputs__valor {
+    text-align: left;
+    color: #000000;    
+    font-weight: bold;    
+    margin: 1rem auto; 
+    font-size: 1.2rem; 
+    letter-spacing: 0.1rem;    
+}
+
+.principal__botao {    
+        border: none;
+        background: var(--primary-color-darker);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: bold;     
+        cursor: pointer;
+        margin-top: 1.5rem;    
+        padding: 0.5rem;
+}
+
+.principal__botao:hover {
+    background: var(--primary-color-active);
+}
+
+.principal__botao:active {
+    background: var(--primary-color-active);    
+}

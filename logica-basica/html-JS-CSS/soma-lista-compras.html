@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de compras</title>
+        <link rel="stylesheet" href="assets/css/somador-lista-compras.css">
+    </head>
+    <body>       
+        <h1 class="cabecalho__titulo">Somar compras</h1>
+
+         <section class="container"> 
+            <div class="inputs"> 
+                <p><label for="item" class="principal__area-de-inputs__texto">Insira o nome do Produto:</label>
+                <input type="text" class="principal__area-de-inputs__nome" required></p>
+                <p><label for="valor" class="principal__area-de-inputs__texto">Insira o valor do Produto:</label>
+                <input type="number" class="principal__area-de-inputs__valor" required></p>
+                <button class="principal__botao">Adicionar Produto</button>    
+            </div>       
+                <ul class="principal__lista_produto" data-lista-produto>                
+                    <li class="principal__lista__produto__nome" data-lista-nome></li>
+                    <li class="principal__lista__produto__valor" data-lista-valor></li>
+                </ul>                
+
+            <div class="principal__total" data-total></div>
+        </section>
+
+        <script src="assets/js/soma-lista-compras.js"></script>    
+    </body>
+</html>

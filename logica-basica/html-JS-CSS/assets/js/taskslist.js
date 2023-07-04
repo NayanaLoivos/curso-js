@@ -8,8 +8,12 @@ function createLi() {
     return li;
 }
 
-//Captura evento de click da tecla 'enter' pressionado e exibindo no front
-
+//Captura evento de click da tecla 'enter' pressionado e exibindo no front as tasks 
+function keyPressEnter(event) {    
+    if(event.keyCode === 13) {        
+        btnAddTask.click();       
+    }
+}
 
 //Limpa e o input
 function clearInput() {
@@ -33,3 +37,4 @@ function clickEvent() {
 }
 
 btnAddTask.addEventListener('click', clickEvent);
+inputTask.addEventListener('keypress', keyPressEnter);

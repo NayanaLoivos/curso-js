@@ -21,11 +21,20 @@ function clearInput() {
 
 }
 
+//criar botão apagar ao criar uma task, append no botão dentro da li da task
+function createDeleteButton(li) {
+    const deleteTask = document.createElement('button');
+    deleteTask.setAttribute('class', 'deleteButton');    
+    deleteTask.innerHTML = 'apagar';
+    li.appendChild(deleteTask);
+}
+
 //Criar tarefas front, append na tarefas e por fim limpa a tarefa do input
 function createTask() {
     const li = createLi();
     li.innerHTML = inputTask.value;
     task.appendChild(li);    
+    createDeleteButton(li);
     clearInput();
 }
 

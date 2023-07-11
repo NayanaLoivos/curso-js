@@ -46,7 +46,7 @@ function clickEvent() {
     return inputTask.value;   
 }
 
-//Apagar o pai da task ao clique no botão que contém a classe 'deleteButton' e do local Storage
+//Apagar o pai da task ao clique no botão que contém a classe 'deleteButton' e do local storage          
 function removeTask(e) {
     const element = e.target;
     if(element.classList.contains('deleteButton')) {

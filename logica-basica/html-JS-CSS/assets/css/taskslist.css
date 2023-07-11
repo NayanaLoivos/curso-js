@@ -56,8 +56,8 @@ body {
 
 #btn-add-task {
     border: none;
-    background: var(--primary-color);
     color: #fff;
+    background: var(--primary-color);
     font-size: 1rem;
     font-weight: bold;
     height: 2.5rem;
@@ -65,10 +65,22 @@ body {
     margin-top: 1.5rem;
 }
 
-#btn-add-task:hover {
+.deleteButton {
+    border: none;
+    margin: 1rem;
+    color: #fff;
+    background: #FBD180;
+    font-size: 0.6rem;
+    font-weight: bold;
+    height: 1rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
+#btn-add-task:hover, .deleteButton:hover {
     background: var(--primary-color-darker);
 }
 
-#btn-add-task:active {
+#btn-add-task:active, .deleteButton:active {
     background: var(--primary-color-active);
 }

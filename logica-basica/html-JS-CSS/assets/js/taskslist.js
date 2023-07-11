@@ -45,5 +45,14 @@ function clickEvent() {
     return inputTask.value;   
 }
 
+//Apagar o pai da task ao clique no botão que contém a classe 'deleteButton'
+function removeTask(e) {
+    const element = e.target;
+    if(element.classList.contains('deleteButton')) {
+        element.parentElement.remove();
+    }
+}
+
 btnAddTask.addEventListener('click', clickEvent);
 inputTask.addEventListener('keypress', keyPressEnter);
+document.addEventListener('click', removeTask);

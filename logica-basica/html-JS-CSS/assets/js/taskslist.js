@@ -35,6 +35,7 @@ function createTask() {
     li.innerHTML = inputTask.value;
     task.appendChild(li);    
     createDeleteButton(li);
+    saveTasks();
     clearInput();
 }
 
@@ -45,13 +46,28 @@ function clickEvent() {
     return inputTask.value;   
 }
 
-//Apagar o pai da task ao clique no botão que contém a classe 'deleteButton'
+//Apagar o pai da task ao clique no botão que contém a classe 'deleteButton' e do local Storage
 function removeTask(e) {
     const element = e.target;
     if(element.classList.contains('deleteButton')) {
         element.parentElement.remove();
+        saveTasks();
     }
 }
+
+//Capturar o outerText da li, inserir as tasks no formato JSON e converter em string e salvar no local storage
+function saveTasks() {
+    let tasks = task.querySelectorAll('li');
+    const arrTasks = [];
+
+    for(let tk of tasks) {
+        let textTask = tk.outerText;       
+        arrTasks.push(textTask);
+    }
+    const tasksJson = JSON.stringify(arrTasks);
+    localStorage.setItem('tasks', tasksJson);
+}   
+
 
 btnAddTask.addEventListener('click', clickEvent);
 inputTask.addEventListener('keypress', keyPressEnter);

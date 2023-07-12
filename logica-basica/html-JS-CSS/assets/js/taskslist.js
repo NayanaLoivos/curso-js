@@ -61,14 +61,26 @@ function saveTasks() {
     const arrTasks = [];
 
     for(let tk of tasks) {
-        let textTask = tk.outerText;       
-        arrTasks.push(textTask);
+        let textTask = tk.innerText;  
+        const cleanTextTask = textTask.replace('apagar', ''); 
+        arrTasks.push(cleanTextTask);
     }
     const tasksJson = JSON.stringify(arrTasks);
     localStorage.setItem('tasks', tasksJson);
 }   
 
-
+//Ler as tasks gravadas no local storage, converter a um objeto novamente e renderizar na li
+function renderLocalStorageTasks() {
+    const tasksLocalStorage = localStorage.getItem('tasks');  
+    const listTasks = JSON.parse(tasksLocalStorage);    
+    for(let tk of listTasks) {        
+        const li = createLi();
+        li. innerHTML = tk;
+        task.appendChild(li);    
+        createDeleteButton(li);
+    }
+}
+renderLocalStorageTasks();
 btnAddTask.addEventListener('click', clickEvent);
 inputTask.addEventListener('keypress', keyPressEnter);
 document.addEventListener('click', removeTask);

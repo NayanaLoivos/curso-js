@@ -65,6 +65,11 @@ body {
     margin-top: 1.5rem;
 }
 
+.liTask {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
 .deleteButton {
     border: none;
     margin: 1rem;

@@ -5,6 +5,7 @@ const task = document.querySelector('.task');
 //cria li dinamicamente
 function createLi() {
     const li = document.createElement('li');    
+    li.classList.add('liTask');
     return li;
 }
 

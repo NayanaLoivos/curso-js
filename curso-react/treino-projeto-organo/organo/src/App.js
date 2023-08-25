@@ -1,13 +1,11 @@
-import Banner from './components/Banner/Banner.js';
-import TextField from './components/TextField/TextField.js';
+import Banner from "./components/Banner/Banner.js";
+import Form from "./components/Form/Form.js";
 
 function App() {
   return (
     <div>
-      <Banner />      
-      <TextField label="Nome" placeholder="Digite seu nome"/>
-      <TextField label="Cargo" placeholder="Digite seu cargo" />
-      <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
+      <Banner />
+      <Form />
     </div>
   );
 }

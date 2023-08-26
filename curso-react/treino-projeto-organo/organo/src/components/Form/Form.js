@@ -1,8 +1,19 @@
-import TextField from '../TextField/TextField.js'
+import TextField from '../TextField/TextField.js';
+import DropdownList from '../DropdownList/DropdownList.js';
 import "./Form.css";
 
 
 function Form() {
+  const team = [
+    'Programação',
+    'Front-End',
+    'Data Science',
+    'Devops',
+    'UX e Design',
+    'Mobile',
+    'Inovação e Gestão'
+  ]
+
   return (
     <section className="form">
       <form>
@@ -10,6 +21,7 @@ function Form() {
         <TextField label="Nome" placeholder="Digite seu nome" />
         <TextField label="Cargo" placeholder="Digite seu cargo" />
         <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
+        <DropdownList label="Time" items={team} />
       </form>
     </section>
   );

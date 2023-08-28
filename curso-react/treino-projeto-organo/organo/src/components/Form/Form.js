@@ -1,6 +1,7 @@
 import TextField from '../TextField/TextField.js';
 import DropdownList from '../DropdownList/DropdownList.js';
 import "./Form.css";
+import Button from '../Button/Button.js';
 
 
 function Form() {
@@ -22,6 +23,9 @@ function Form() {
         <TextField label="Cargo" placeholder="Digite seu cargo" />
         <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
         <DropdownList label="Time" items={team} />
+        <Button>
+          Criar Card
+        </Button>
       </form>
     </section>
   );

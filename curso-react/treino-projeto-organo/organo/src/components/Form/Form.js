@@ -15,14 +15,19 @@ function Form() {
     'Inovação e Gestão'
   ]
 
+  function whenSaving(event) {
+    event.preventDefault();
+    console.log('botão acionado, go event!')
+  }
+
   return (
     <section className="form">
-      <form>
+      <form onSubmit={whenSaving}>
         <h2>Preencha os dados para criar o card</h2>
-        <TextField label="Nome" placeholder="Digite seu nome" />
-        <TextField label="Cargo" placeholder="Digite seu cargo" />
+        <TextField mandatory={true} label="Nome" placeholder="Digite seu nome" />
+        <TextField mandatory={true} label="Cargo" placeholder="Digite seu cargo" />
         <TextField label="Imagem" placeholder="Digite o endereço da imagem" />
-        <DropdownList label="Time" items={team} />
+        <DropdownList mandatory={true} label="Time" items={team} />
         <Button>
           Criar Card
         </Button>

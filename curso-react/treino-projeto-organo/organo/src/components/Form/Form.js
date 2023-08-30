@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 
 function Form() {
-  const team = [
+  const teams = [
     'Programação',
     'Front-End',
     'Data Science',
@@ -19,11 +19,11 @@ function Form() {
   const [name, setNome] = useState('')
   const [jobRole, setJobRole] = useState('') 
   const [image, setImage] = useState('')
+  const [team, setTeam] = useState(teams[0])
 
   function whenSaving(event) {
     event.preventDefault();
-    console.log('Form foi submetido =>', name, jobRole, image)
-    console.log(event.target.value)
+    console.log('Form foi submetido =>', name, jobRole, image, team)    
   }
 
   return (
@@ -50,7 +50,9 @@ function Form() {
         <DropdownList 
           mandatory={true} 
           label="Time" 
-          items={team} />
+          items={teams}
+          valueInput={team}
+          changed={valueInput => setTeam(valueInput)} />
         <Button>
           Criar Card
         </Button>

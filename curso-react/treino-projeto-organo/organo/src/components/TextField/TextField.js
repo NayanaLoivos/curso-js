@@ -1,11 +1,12 @@
+import { useState } from 'react'
 import './TextField.css'
 
 function TextField(props) {   
-    let valueInput = 'Nayana'
-
+    const [valueInput, setValue] = useState('Nayana')    
+    
     function onChange(event) {
-      valueInput = event.target.value
-      console.log(valueInput)
+        setValue(event.target.value)
+        console.log(valueInput)
     }
     
     return(
